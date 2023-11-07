@@ -13,9 +13,12 @@ public class Evento {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
+
+
     public long getId() {
         return id;
     }
+
     private String nomeEvento;
 
     private Date dataEvento;
@@ -47,4 +50,9 @@ public class Evento {
     }
 
 
+    public boolean isPresent() {
+
+        return true;
+
+    }
 }

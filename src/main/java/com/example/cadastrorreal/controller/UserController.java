@@ -1,6 +1,8 @@
 package com.example.cadastrorreal.controller;
 
+import com.example.cadastrorreal.model.Evento;
 import com.example.cadastrorreal.model.User;
+import com.example.cadastrorreal.repository.EventRepository;
 import com.example.cadastrorreal.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -10,6 +12,9 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
+
+import java.util.ArrayList;
+import java.util.List;
 
 @RestController
 public class UserController {
@@ -52,7 +57,7 @@ public class UserController {
         if (username != null) {
             model.addAttribute("username", username);
         }
-        return "index";
+        return "index.html";
     }
 
 }
